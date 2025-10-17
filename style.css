@@ -7,7 +7,6 @@
 
 body {
     font-family: Arial, "Microsoft YaHei", "微软雅黑", sans-serif;
-    background-color: #F1F1F2;
     color: #1A1A1A;
     line-height: 1.6;
     overflow-x: hidden;
@@ -344,7 +343,6 @@ ul {
     left: 0;
     right: 0;
     height: 60%;
-    background: linear-gradient(180deg, rgba(255, 228, 230, 0.3) 0%, rgba(255, 228, 230, 0.6) 100%);
     border-radius: 0 0 50% 50% / 0 0 20% 20%;
     z-index: 1;
 }
@@ -355,7 +353,7 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('bg.png');
+    background-image: url('hero-bg-desktop.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 1920px 660px;
@@ -920,7 +918,7 @@ ul {
         display: block;
         background-size: cover;
         background-position: center top;
-        background-image: url('bg-h5.png');
+        background-image: url('hero-bg-mobile.png');
     }
 
     .hero-main {
