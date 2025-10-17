@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.accountboy.com)",
+      "Bash(dir /b \"D:\\yhyWS\\work space\\推广站2\")",
+      "Bash(findstr:*)",
+      "Bash(dir:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
