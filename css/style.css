@@ -353,7 +353,7 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('hero-bg-desktop.png');
+    background-image: url('/images/hero-bg-desktop.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 1920px 660px;
@@ -918,7 +918,7 @@ ul {
         display: block;
         background-size: cover;
         background-position: center top;
-        background-image: url('hero-bg-mobile.png');
+        background-image: url('/images/hero-bg-mobile.png');
     }
 
     .hero-main {
