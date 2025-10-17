@@ -459,9 +459,9 @@ ul {
 }
 
 .title-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 16px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
 }
 
 .section-title h2 {
@@ -471,15 +471,57 @@ ul {
     margin-bottom: 20px;
 }
 
+/* 标题行容器样式 - 文字居中，图标在两侧 */
+.title-line-wrapper {
+    text-align: center;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.title-line-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.title-line-container {
+    position: relative;
+    display: inline-block;
+}
+
+.title-text {
+    font-size: 42px;
+    font-weight: 1000;
+    color: #1A1A1A;
+    display: inline-block;
+}
+
+.title-icon {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    margin-right: 12px;
+    width: 50px;
+    height: 50px;
+}
+
 .emoji {
-    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
     margin-left: 8px;
+    font-size: 48px;
 }
 
 .title-line {
     width: 300px;
     height: auto;
     margin: 0 auto;
+}
+
+/* 桌面端隐藏移动端标题元素 */
+.title-section-mobile {
+    display: none;
 }
 
 /* ========== 优势卡片网格 ========== */
@@ -788,14 +830,20 @@ ul {
 /* ========== 移动端响应式 ========== */
 @media (max-width: 768px) {
     /* 导航栏 */
+    .header {
+        padding: 0;
+    }
+
     .header-content {
         flex-wrap: nowrap;
         justify-content: space-between;
+        gap: 16px;
     }
 
     .logo {
         flex-shrink: 0;
         transform: scale(0.85);
+        margin-left: 8px;
     }
 
     .search-box {
@@ -803,9 +851,10 @@ ul {
     }
 
     .header-actions {
-        gap: 8px;
+        gap: 12px;
         font-size: 12px;
         flex-shrink: 0;
+        margin-right: 8px;
     }
 
     .btn-affiliate-wrapper {
@@ -828,7 +877,7 @@ ul {
     }
 
     .btn-user-mobile {
-        display: flex;
+        display: none;
     }
 
     .language-selector {
@@ -866,18 +915,19 @@ ul {
 
     /* Hero */
     .hero-section {
-        padding: 60px 0 40px;
+        padding: 40px 0 20px;
     }
 
     .hero-content {
         flex-direction: column;
-        min-height: auto;
+        min-height: 300px;
     }
 
     .hero-bg-image {
         display: block;
         background-size: cover;
         background-position: center top;
+        background-image: url('bg-h5.png');
     }
 
     .hero-main {
@@ -905,6 +955,11 @@ ul {
 
     .hero-subtitle {
         font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .hero-logo {
+        margin-bottom: 20px;
     }
 
     .btn-join {
@@ -918,12 +973,70 @@ ul {
     }
 
     .title-icon {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     .emoji {
         font-size: 32px;
+    }
+
+    /* 移动端标题行容器样式 */
+    .title-line-wrapper {
+        margin-bottom: 6px;
+    }
+
+    .title-line-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .title-text {
+        font-size: 28px;
+    }
+
+    .title-icon {
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%);
+        margin-right: 8px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .emoji {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+        margin-left: 6px;
+        font-size: 32px;
+    }
+
+    /* 加入推广合作标题区域 - 移动端优化 */
+    .benefits-header {
+        padding: 30px 0 20px;
+    }
+
+    /* 优势卡片网格 - 移动端优化 */
+    .benefits-grid {
+        padding: 20px 0 40px;
+    }
+
+    /* 标题区域移动端布局 */
+    .title-section-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .benefits-megaphone {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
     }
 
     /* 优势卡片 */
