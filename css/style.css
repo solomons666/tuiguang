@@ -296,7 +296,23 @@ ul {
 
 /* ========== 主导航菜单 ========== */
 .main-nav {
-    background-color: #E60027;
+    background: linear-gradient(135deg, #E60027 0%, #C00020 50%, #A00018 100%);
+    box-shadow: 0 2px 12px rgba(230, 0, 39, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.main-nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0.1) 100%);
 }
 
 .nav-menu {
@@ -305,29 +321,46 @@ ul {
     justify-content: center;
     gap: 40px;
     padding: 0;
+    position: relative;
 }
 
 .nav-item {
     color: white;
-    font-size: 14px;
-    padding: 14px 0;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px 0;
     cursor: pointer;
     position: relative;
-    transition: opacity 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .nav-item:hover {
-    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item.active {
+    color: white;
+    font-weight: 700;
 }
 
 .nav-item.active::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
     height: 3px;
-    background-color: white;
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        white 50%,
+        rgba(255, 255, 255, 0.8) 100%);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
 /* ========== Hero 区域 ========== */
@@ -894,14 +927,16 @@ ul {
     .nav-menu {
         overflow-x: auto;
         justify-content: flex-start;
-        gap: 20px;
+        gap: 24px;
         padding: 0 20px;
         -webkit-overflow-scrolling: touch;
     }
 
     .nav-item {
         white-space: nowrap;
-        font-size: 13px;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 14px 0;
     }
 
     /* Hero */
